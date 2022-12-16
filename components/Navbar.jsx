@@ -4,8 +4,6 @@ import {FcMenu, FcHome, FcAbout, FcSearch} from 'react-icons/fc';
 import { BsSearch }  from 'react-icons/bs';
 import {FiKey} from 'react-icons/fi';
 
-import React from 'react'
-
 const Navbar = () => {
   return (
     <Flex p="2" borderBottom="1px" borderColor="gray.100">
