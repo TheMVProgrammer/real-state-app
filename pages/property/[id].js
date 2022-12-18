@@ -13,14 +13,14 @@ const PropertyDetails = ( {propertyDetails: { price, rentFrequency, rooms, title
     </Box>
 );
 
-export async function getServerSideProps({ params: { id } }) {
-    const data = await fetchApi(`${baseUrl}/properties/details?externalID=${id}`);
-
-    return {
-        props: {
-            propertyDetails: data 
-        }
-    }
-}
-
 export default PropertyDetails;
+
+export async function getServerSideProps({ params: { id } }) {
+  const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
+  
+  return {
+    props: {
+      propertyDetails: data,
+    },
+  };
+}
